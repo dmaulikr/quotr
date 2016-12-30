@@ -15,6 +15,12 @@ final class Quote {
     var author: String
     var id: Int
     
+    init() {
+        self.content = "This is a default quote. There are many like it but this one is mine."
+        self.author = "Henry M Ly"
+        self.id = 0221
+    }
+    
     init(content: String, author: String, id: Int) {
         self.content = content
         self.author = author
@@ -22,13 +28,9 @@ final class Quote {
     }
     
     init(json: JSON) {
-//        guard let content = json["content"] as? String, let author = json["author"] as? String, let id = json["id"] as? Int else { return }
         self.content = json["content"] as! String
         self.author = json["author"] as! String
         self.id = json["id"] as! Int
-//        self.content = content
-//        self.author = author
-//        self.id = id
     }
     
 }

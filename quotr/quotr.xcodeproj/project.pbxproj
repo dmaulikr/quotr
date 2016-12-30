@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA9E3F751E163CB600B743B0 /* QOTDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9E3F741E163CB600B743B0 /* QOTDViewController.swift */; };
 		AAD44CD41E15D620006501DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD44CD31E15D620006501DB /* AppDelegate.swift */; };
 		AAD44CD91E15D620006501DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD44CD71E15D620006501DB /* Main.storyboard */; };
 		AAD44CDB1E15D620006501DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD44CDA1E15D620006501DB /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA9E3F741E163CB600B743B0 /* QOTDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QOTDViewController.swift; sourceTree = "<group>"; };
 		AAD44CD01E15D620006501DB /* quotr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quotr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD44CD31E15D620006501DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD44CD81E15D620006501DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				AAD44CE91E15E1BD006501DB /* QuotesTableViewController.swift */,
+				AA9E3F741E163CB600B743B0 /* QOTDViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				AAD44CE61E15D72A006501DB /* Quote.swift in Sources */,
 				AAD44CEA1E15E1BD006501DB /* QuotesTableViewController.swift in Sources */,
 				AAD44CD41E15D620006501DB /* AppDelegate.swift in Sources */,
+				AA9E3F751E163CB600B743B0 /* QOTDViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +338,7 @@
 				AAD44CE41E15D620006501DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

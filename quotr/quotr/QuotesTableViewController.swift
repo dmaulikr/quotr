@@ -35,8 +35,8 @@ class QuotesTableViewController: UITableViewController {
     
         let eachQuote = quotesArray[indexPath.row]
         
-        cell.contentLabel.text = ("\"\(eachQuote.content)\"")
-        cell.authorLabel.text = eachQuote.author
+        cell.contentLabel.text = eachQuote.content
+        cell.authorLabel.text = eachQuote.author.uppercased()
         
         return cell
     }
@@ -68,8 +68,9 @@ class QuotesTableViewController: UITableViewController {
                     print(error)
                 }
             }
+            self.quotesArray.reverse()
             self.refreshTableView()
-            }.resume()
+        }.resume()
     }
 
     func refreshTableView() {
