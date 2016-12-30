@@ -16,30 +16,24 @@ class QuotesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.93, green:0.59, blue:0.49, alpha:1.00)
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        setupView()
         fetchQuotes()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return quotesArray.count
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 5
+        return quotesArray.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath) as! QuoteTableViewCell
     
-        let eachQuote = quotesArray[indexPath.section]
+        let eachQuote = quotesArray[indexPath.row]
         
         cell.contentLabel.text = ("\"\(eachQuote.content)\"")
         cell.authorLabel.text = eachQuote.author
@@ -47,17 +41,15 @@ class QuotesTableViewController: UITableViewController {
         return cell
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func setupView() {
+        navigationController?.navigationBar.barTintColor = UIColor(red:0.93, green:0.59, blue:0.49, alpha:1.00)
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
     }
-    */
     
     func fetchQuotes() {
+        quotesArray.removeAll()
+        
         let urlString = "https://protected-cove-92007.herokuapp.com/all"
         let url = URL(string: urlString)
         
@@ -86,5 +78,5 @@ class QuotesTableViewController: UITableViewController {
             self.tableView.reloadData()
         }
     }
-    
+
 }
