@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Quotes Table View Controller-->
+        <!--quotr-->
         <scene sceneID="mmR-h7-OVk">
             <objects>
                 <tableViewController id="0Q1-Y7-ScO" customClass="QuotesTableViewController" customModule="quotr" customModuleProvider="target" sceneMemberID="viewController">
@@ -30,13 +30,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Failure is an option here. If things are not failing, you are not innovating enough.&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="1" translatesAutoresizingMaskIntoConstraints="NO" id="xpv-7k-Qmw">
-                                            <rect key="frame" x="8" y="8" width="359" height="112"/>
+                                            <rect key="frame" x="23" y="8" width="329" height="112"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elon Musk" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6U-6O-FDy">
-                                            <rect key="frame" x="8" y="125" width="359" height="14.5"/>
+                                            <rect key="frame" x="23" y="125" width="329" height="14.5"/>
                                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -45,10 +45,10 @@
                                     <color key="backgroundColor" red="0.96862745098039216" green="0.61176470588235299" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="f6U-6O-FDy" firstAttribute="width" secondItem="xpv-7k-Qmw" secondAttribute="width" id="COH-mM-89x"/>
-                                        <constraint firstItem="xpv-7k-Qmw" firstAttribute="leading" secondItem="VTt-Q3-Jbs" secondAttribute="leadingMargin" id="TPR-6T-4UB"/>
+                                        <constraint firstItem="xpv-7k-Qmw" firstAttribute="leading" secondItem="VTt-Q3-Jbs" secondAttribute="leadingMargin" constant="15" id="TPR-6T-4UB"/>
                                         <constraint firstItem="xpv-7k-Qmw" firstAttribute="top" secondItem="VTt-Q3-Jbs" secondAttribute="topMargin" id="cen-jg-h90"/>
                                         <constraint firstItem="f6U-6O-FDy" firstAttribute="centerX" secondItem="xpv-7k-Qmw" secondAttribute="centerX" id="g39-MT-IK6"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="xpv-7k-Qmw" secondAttribute="trailing" id="mS9-hQ-0yM"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="xpv-7k-Qmw" secondAttribute="trailing" constant="15" id="mS9-hQ-0yM"/>
                                         <constraint firstItem="xpv-7k-Qmw" firstAttribute="height" secondItem="VTt-Q3-Jbs" secondAttribute="height" multiplier="0.75" id="mVJ-X2-TD0"/>
                                         <constraint firstItem="f6U-6O-FDy" firstAttribute="top" secondItem="xpv-7k-Qmw" secondAttribute="bottom" constant="5" id="yT6-hG-1zQ"/>
                                     </constraints>
@@ -66,7 +66,7 @@
                             <outlet property="delegate" destination="0Q1-Y7-ScO" id="9FI-f4-88B"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="7F4-Ix-OzE"/>
+                    <navigationItem key="navigationItem" title="quotr" id="7F4-Ix-OzE"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdD-Lb-qaH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
