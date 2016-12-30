@@ -63,7 +63,6 @@ class QuotesTableViewController: UITableViewController {
                     for each in quotes {
                         let newQuote = Quote(json: each)
                         self.quotesArray.append(newQuote)
-                        print(each)
                     }
                 } catch let error as NSError {
                     print(error)
