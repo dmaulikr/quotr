@@ -12,6 +12,7 @@
 		AAD44CD91E15D620006501DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD44CD71E15D620006501DB /* Main.storyboard */; };
 		AAD44CDB1E15D620006501DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD44CDA1E15D620006501DB /* Assets.xcassets */; };
 		AAD44CDE1E15D620006501DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD44CDC1E15D620006501DB /* LaunchScreen.storyboard */; };
+		AAD44CE61E15D72A006501DB /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD44CE51E15D72A006501DB /* Quote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		AAD44CDA1E15D620006501DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAD44CDD1E15D620006501DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAD44CDF1E15D620006501DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AAD44CE51E15D72A006501DB /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +58,21 @@
 			children = (
 				AAD44CD31E15D620006501DB /* AppDelegate.swift */,
 				AAD44CD51E15D620006501DB /* ViewController.swift */,
+				AAD44CE71E15D72F006501DB /* Model */,
 				AAD44CD71E15D620006501DB /* Main.storyboard */,
 				AAD44CDA1E15D620006501DB /* Assets.xcassets */,
 				AAD44CDC1E15D620006501DB /* LaunchScreen.storyboard */,
 				AAD44CDF1E15D620006501DB /* Info.plist */,
 			);
 			path = quotr;
+			sourceTree = "<group>";
+		};
+		AAD44CE71E15D72F006501DB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AAD44CE51E15D72A006501DB /* Quote.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD44CD61E15D620006501DB /* ViewController.swift in Sources */,
+				AAD44CE61E15D72A006501DB /* Quote.swift in Sources */,
 				AAD44CD41E15D620006501DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
