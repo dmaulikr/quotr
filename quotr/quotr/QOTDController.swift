@@ -43,7 +43,8 @@ class QOTDController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         cell.quote = quotes?[indexPath.item]
         
-        
+        cell.contentLabel.alpha = 0
+        cell.authorLabel.alpha = 0
         
         UIView.animate(withDuration: 1.0) {
             cell.contentLabel.alpha = 1

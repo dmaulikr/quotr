@@ -53,7 +53,7 @@ class QOTDCell: BaseCell {
         
         authorLabel.snp.makeConstraints { (make) in
             make.centerX.width.equalToSuperview()
-            make.top.equalTo(contentLabel.snp.bottom).offset(8)
+            make.top.equalTo(contentLabel.snp.bottom).offset(16)
         }
     }
     

@@ -14,7 +14,6 @@
 		AA98B08D1E1BA10F0034373A /* QOTDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98B08C1E1BA10F0034373A /* QOTDCell.swift */; };
 		AA98B08F1E1BA1470034373A /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98B08E1E1BA1470034373A /* BaseCell.swift */; };
 		AAD44CD41E15D620006501DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD44CD31E15D620006501DB /* AppDelegate.swift */; };
-		AAD44CD91E15D620006501DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD44CD71E15D620006501DB /* Main.storyboard */; };
 		AAD44CDB1E15D620006501DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD44CDA1E15D620006501DB /* Assets.xcassets */; };
 		AAD44CDE1E15D620006501DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD44CDC1E15D620006501DB /* LaunchScreen.storyboard */; };
 		AAD44CE61E15D72A006501DB /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD44CE51E15D72A006501DB /* Quote.swift */; };
@@ -33,7 +32,6 @@
 		AA98B08E1E1BA1470034373A /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		AAD44CD01E15D620006501DB /* quotr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quotr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD44CD31E15D620006501DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AAD44CD81E15D620006501DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AAD44CDA1E15D620006501DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAD44CDD1E15D620006501DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAD44CDF1E15D620006501DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,7 +112,6 @@
 		AAD44CE81E15E1A5006501DB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AAD44CD71E15D620006501DB /* Main.storyboard */,
 				AA98B08E1E1BA1470034373A /* BaseCell.swift */,
 				AA98B08C1E1BA10F0034373A /* QOTDCell.swift */,
 			);
@@ -211,7 +208,6 @@
 			files = (
 				AAD44CDE1E15D620006501DB /* LaunchScreen.storyboard in Resources */,
 				AAD44CDB1E15D620006501DB /* Assets.xcassets in Resources */,
-				AAD44CD91E15D620006501DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,14 +280,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AAD44CD71E15D620006501DB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AAD44CD81E15D620006501DB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AAD44CDC1E15D620006501DB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
