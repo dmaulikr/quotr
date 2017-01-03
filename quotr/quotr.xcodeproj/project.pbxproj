@@ -16,9 +16,13 @@
 		AAD44CE61E15D72A006501DB /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD44CE51E15D72A006501DB /* Quote.swift */; };
 		AAD44CEA1E15E1BD006501DB /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD44CE91E15E1BD006501DB /* QuotesTableViewController.swift */; };
 		AAD44CED1E15E5D4006501DB /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD44CEC1E15E5D4006501DB /* QuoteTableViewCell.swift */; };
+		D4FB5DDC55770EEAAEBE0209 /* Pods_quotr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 809ECFAD9E231FCD25570513 /* Pods_quotr.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14E1115CE9EEA568023AD8C1 /* Pods-quotr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quotr/Pods-quotr.debug.xcconfig"; sourceTree = "<group>"; };
+		809ECFAD9E231FCD25570513 /* Pods_quotr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quotr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8325A998AD2BFCD904DD5363 /* Pods-quotr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotr.release.xcconfig"; path = "Pods/Target Support Files/Pods-quotr/Pods-quotr.release.xcconfig"; sourceTree = "<group>"; };
 		AA98B0831E1B25A20034373A /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		AA9E3F741E163CB600B743B0 /* QOTDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QOTDViewController.swift; sourceTree = "<group>"; };
 		AAD44CD01E15D620006501DB /* quotr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quotr.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4FB5DDC55770EEAAEBE0209 /* Pods_quotr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +61,8 @@
 			children = (
 				AAD44CD21E15D620006501DB /* quotr */,
 				AAD44CD11E15D620006501DB /* Products */,
+				D8AB80A8E914BA123D8BEA31 /* Pods */,
+				C7F22ACC2BFB3DF2F32FD7D7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +115,23 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		C7F22ACC2BFB3DF2F32FD7D7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				809ECFAD9E231FCD25570513 /* Pods_quotr.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D8AB80A8E914BA123D8BEA31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14E1115CE9EEA568023AD8C1 /* Pods-quotr.debug.xcconfig */,
+				8325A998AD2BFCD904DD5363 /* Pods-quotr.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAD44CE21E15D620006501DB /* Build configuration list for PBXNativeTarget "quotr" */;
 			buildPhases = (
+				D01D180723CD7B141595A4C6 /* [CP] Check Pods Manifest.lock */,
 				AAD44CCC1E15D61F006501DB /* Sources */,
 				AAD44CCD1E15D61F006501DB /* Frameworks */,
 				AAD44CCE1E15D61F006501DB /* Resources */,
+				E241ECC098CC718A7A976A35 /* [CP] Embed Pods Frameworks */,
+				76459670BB12A2B926BDBFFB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -175,6 +202,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		76459670BB12A2B926BDBFFB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quotr/Pods-quotr-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D01D180723CD7B141595A4C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E241ECC098CC718A7A976A35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quotr/Pods-quotr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AAD44CCC1E15D61F006501DB /* Sources */ = {
@@ -305,7 +380,9 @@
 		};
 		AAD44CE31E15D620006501DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14E1115CE9EEA568023AD8C1 /* Pods-quotr.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N2MERYPM36;
 				INFOPLIST_FILE = quotr/Info.plist;
@@ -319,7 +396,9 @@
 		};
 		AAD44CE41E15D620006501DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8325A998AD2BFCD904DD5363 /* Pods-quotr.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = N2MERYPM36;
 				INFOPLIST_FILE = quotr/Info.plist;
