@@ -35,7 +35,7 @@ class QuotesTableViewController: UITableViewController {
         cell.contentLabel.alpha = 0
         cell.authorLabel.alpha = 0
         
-        UIView.animate(withDuration: 2.0) {
+        UIView.animate(withDuration: 1.0) {
             cell.contentLabel.alpha = 1
             cell.authorLabel.alpha = 1
         }

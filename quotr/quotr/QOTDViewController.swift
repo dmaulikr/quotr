@@ -32,7 +32,7 @@ class QOTDViewController: UIViewController {
             self.contentLabel.text = latestQuote?.content
             self.authorLabel.text = latestQuote?.author.uppercased()
             
-            UIView.animate(withDuration: 2.0, animations: {
+            UIView.animate(withDuration: 2.5, animations: {
                 self.qotdLabel.alpha = 1
                 self.contentLabel.alpha = 1
                 self.authorLabel.alpha = 1
