@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA98B0841E1B25A20034373A /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98B0831E1B25A20034373A /* ApiService.swift */; };
 		AA9E3F751E163CB600B743B0 /* QOTDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9E3F741E163CB600B743B0 /* QOTDViewController.swift */; };
 		AAD44CD41E15D620006501DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD44CD31E15D620006501DB /* AppDelegate.swift */; };
 		AAD44CD91E15D620006501DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD44CD71E15D620006501DB /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA98B0831E1B25A20034373A /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		AA9E3F741E163CB600B743B0 /* QOTDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QOTDViewController.swift; sourceTree = "<group>"; };
 		AAD44CD01E15D620006501DB /* quotr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quotr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD44CD31E15D620006501DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA98B0821E1B258D0034373A /* ApiService */ = {
+			isa = PBXGroup;
+			children = (
+				AA98B0831E1B25A20034373A /* ApiService.swift */,
+			);
+			name = ApiService;
+			sourceTree = "<group>";
+		};
 		AAD44CC71E15D61F006501DB = {
 			isa = PBXGroup;
 			children = (
@@ -61,9 +71,10 @@
 			isa = PBXGroup;
 			children = (
 				AAD44CD31E15D620006501DB /* AppDelegate.swift */,
-				AAD44CEB1E15E256006501DB /* Controller */,
+				AA98B0821E1B258D0034373A /* ApiService */,
 				AAD44CE71E15D72F006501DB /* Model */,
 				AAD44CE81E15E1A5006501DB /* View */,
+				AAD44CEB1E15E256006501DB /* Controller */,
 				AAD44CDA1E15D620006501DB /* Assets.xcassets */,
 				AAD44CDC1E15D620006501DB /* LaunchScreen.storyboard */,
 				AAD44CDF1E15D620006501DB /* Info.plist */,
@@ -91,8 +102,8 @@
 		AAD44CEB1E15E256006501DB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AAD44CE91E15E1BD006501DB /* QuotesTableViewController.swift */,
 				AA9E3F741E163CB600B743B0 /* QOTDViewController.swift */,
+				AAD44CE91E15E1BD006501DB /* QuotesTableViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -172,6 +183,7 @@
 			files = (
 				AAD44CED1E15E5D4006501DB /* QuoteTableViewCell.swift in Sources */,
 				AAD44CE61E15D72A006501DB /* Quote.swift in Sources */,
+				AA98B0841E1B25A20034373A /* ApiService.swift in Sources */,
 				AAD44CEA1E15E1BD006501DB /* QuotesTableViewController.swift in Sources */,
 				AAD44CD41E15D620006501DB /* AppDelegate.swift in Sources */,
 				AA9E3F751E163CB600B743B0 /* QOTDViewController.swift in Sources */,

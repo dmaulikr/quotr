@@ -8,11 +8,9 @@
 
 import UIKit
 
-typealias JSON = [String:Any]
-
 class QuotesTableViewController: UITableViewController {
     
-    var quotesArray = [Quote]()
+    var quotesArray: [Quote]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,54 +25,32 @@ class QuotesTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return quotesArray.count
+        return quotesArray?.count ?? 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "quoteCell", for: indexPath) as! QuoteTableViewCell
     
-        let eachQuote = quotesArray[indexPath.row]
+        cell.quote = quotesArray?[indexPath.row]
+        cell.contentLabel.alpha = 0
+        cell.authorLabel.alpha = 0
         
-        cell.contentLabel.text = eachQuote.content
-        cell.authorLabel.text = eachQuote.author.uppercased()
+        UIView.animate(withDuration: 2.0) {
+            cell.contentLabel.alpha = 1
+            cell.authorLabel.alpha = 1
+        }
         
         return cell
     }
 
     func setupView() {
-        navigationController?.navigationBar.barTintColor = UIColor(red:0.93, green:0.59, blue:0.49, alpha:1.00)
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        // TODO: Setup this view
     }
     
     func fetchQuotes() {
-        quotesArray.removeAll()
-        
-        let urlString = "https://protected-cove-92007.herokuapp.com/all"
-        let url = URL(string: urlString)
-        
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            if error != nil {
-                print(error ?? "Error parsing JSON")
-            } else {
-                do {
-                    let quotes = try JSONSerialization.jsonObject(with: data!, options: []) as! [JSON]
-                    
-                    for each in quotes {
-                        let newQuote = Quote(json: each)
-                        self.quotesArray.append(newQuote)
-                    }
-                } catch let error as NSError {
-                    print(error)
-                }
-            }
-            self.quotesArray.reverse()
-            self.refreshTableView()
-        }.resume()
-    }
-
-    func refreshTableView() {
-        DispatchQueue.main.async {
+        ApiService.sharedInstance.fetchQuotes { (quotes) in
+            self.quotesArray = quotes
+            self.quotesArray?.reverse()
             self.tableView.reloadData()
         }
     }

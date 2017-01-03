@@ -10,43 +10,34 @@ import UIKit
 
 class QOTDViewController: UIViewController {
 
+    @IBOutlet weak var qotdLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     
-    var quotesArray = [Quote]()
-    var qotd = Quote()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchQuotes()
+        setupView()
+        fetchLatestQuote()
+    }
+    
+    func setupView() {
+        self.qotdLabel.alpha = 0
+        self.contentLabel.alpha = 0
+        self.authorLabel.alpha = 0
     }
 
-    func fetchQuotes() {
-        quotesArray.removeAll()
-        
-        let urlString = "https://protected-cove-92007.herokuapp.com/all"
-        let url = URL(string: urlString)
-        
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
-            if error != nil {
-                print(error ?? "Error parsing JSON")
-            } else {
-                do {
-                    let quotes = try JSONSerialization.jsonObject(with: data!, options: []) as! [JSON]
-                    
-                    for each in quotes {
-                        let newQuote = Quote(json: each)
-                        self.quotesArray.append(newQuote)
-                    }
-                    guard let latestQuote = quotes.last else { return }
-                    self.qotd = Quote(json: latestQuote)
-                    self.contentLabel.text = self.qotd.content
-                    self.authorLabel.text = self.qotd.author.uppercased()
-                } catch let error as NSError {
-                    print(error)
-                }
-            }
-        }.resume()
+    func fetchLatestQuote() {
+        ApiService.sharedInstance.fetchQuotes { (quotes) in
+            let latestQuote = quotes.last
+            self.contentLabel.text = latestQuote?.content
+            self.authorLabel.text = latestQuote?.author.uppercased()
+            
+            UIView.animate(withDuration: 2.0, animations: {
+                self.qotdLabel.alpha = 1
+                self.contentLabel.alpha = 1
+                self.authorLabel.alpha = 1
+            })
+        }
     }
     
 }

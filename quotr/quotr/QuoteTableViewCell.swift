@@ -13,6 +13,13 @@ class QuoteTableViewCell: UITableViewCell {
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     
+    var quote: Quote? {
+        didSet {
+            contentLabel.text = quote?.content
+            authorLabel.text = quote?.author.uppercased()
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
