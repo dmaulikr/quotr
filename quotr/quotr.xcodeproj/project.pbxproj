@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		AA98B0841E1B25A20034373A /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98B0831E1B25A20034373A /* ApiService.swift */; };
-		AA9E3F751E163CB600B743B0 /* QOTDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9E3F741E163CB600B743B0 /* QOTDViewController.swift */; };
+		AA98B0861E1B9CBF0034373A /* QOTDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98B0851E1B9CBF0034373A /* QOTDController.swift */; };
+		AA98B0891E1B9EB60034373A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98B0881E1B9EB60034373A /* Constants.swift */; };
+		AA98B08B1E1B9F2E0034373A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98B08A1E1B9F2E0034373A /* Extensions.swift */; };
+		AA98B08D1E1BA10F0034373A /* QOTDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98B08C1E1BA10F0034373A /* QOTDCell.swift */; };
+		AA98B08F1E1BA1470034373A /* BaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA98B08E1E1BA1470034373A /* BaseCell.swift */; };
 		AAD44CD41E15D620006501DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD44CD31E15D620006501DB /* AppDelegate.swift */; };
 		AAD44CD91E15D620006501DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD44CD71E15D620006501DB /* Main.storyboard */; };
 		AAD44CDB1E15D620006501DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD44CDA1E15D620006501DB /* Assets.xcassets */; };
 		AAD44CDE1E15D620006501DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAD44CDC1E15D620006501DB /* LaunchScreen.storyboard */; };
 		AAD44CE61E15D72A006501DB /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD44CE51E15D72A006501DB /* Quote.swift */; };
-		AAD44CEA1E15E1BD006501DB /* QuotesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD44CE91E15E1BD006501DB /* QuotesTableViewController.swift */; };
-		AAD44CED1E15E5D4006501DB /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD44CEC1E15E5D4006501DB /* QuoteTableViewCell.swift */; };
 		D4FB5DDC55770EEAAEBE0209 /* Pods_quotr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 809ECFAD9E231FCD25570513 /* Pods_quotr.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +26,11 @@
 		809ECFAD9E231FCD25570513 /* Pods_quotr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quotr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8325A998AD2BFCD904DD5363 /* Pods-quotr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quotr.release.xcconfig"; path = "Pods/Target Support Files/Pods-quotr/Pods-quotr.release.xcconfig"; sourceTree = "<group>"; };
 		AA98B0831E1B25A20034373A /* ApiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
-		AA9E3F741E163CB600B743B0 /* QOTDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QOTDViewController.swift; sourceTree = "<group>"; };
+		AA98B0851E1B9CBF0034373A /* QOTDController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QOTDController.swift; sourceTree = "<group>"; };
+		AA98B0881E1B9EB60034373A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AA98B08A1E1B9F2E0034373A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AA98B08C1E1BA10F0034373A /* QOTDCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QOTDCell.swift; sourceTree = "<group>"; };
+		AA98B08E1E1BA1470034373A /* BaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCell.swift; sourceTree = "<group>"; };
 		AAD44CD01E15D620006501DB /* quotr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = quotr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD44CD31E15D620006501DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD44CD81E15D620006501DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -32,8 +38,6 @@
 		AAD44CDD1E15D620006501DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAD44CDF1E15D620006501DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAD44CE51E15D72A006501DB /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
-		AAD44CE91E15E1BD006501DB /* QuotesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesTableViewController.swift; sourceTree = "<group>"; };
-		AAD44CEC1E15E5D4006501DB /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,15 @@
 				AA98B0831E1B25A20034373A /* ApiService.swift */,
 			);
 			name = ApiService;
+			sourceTree = "<group>";
+		};
+		AA98B0871E1B9EA40034373A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AA98B0881E1B9EB60034373A /* Constants.swift */,
+				AA98B08A1E1B9F2E0034373A /* Extensions.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 		AAD44CC71E15D61F006501DB = {
@@ -82,6 +95,7 @@
 				AAD44CE71E15D72F006501DB /* Model */,
 				AAD44CE81E15E1A5006501DB /* View */,
 				AAD44CEB1E15E256006501DB /* Controller */,
+				AA98B0871E1B9EA40034373A /* Helpers */,
 				AAD44CDA1E15D620006501DB /* Assets.xcassets */,
 				AAD44CDC1E15D620006501DB /* LaunchScreen.storyboard */,
 				AAD44CDF1E15D620006501DB /* Info.plist */,
@@ -100,8 +114,9 @@
 		AAD44CE81E15E1A5006501DB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AAD44CEC1E15E5D4006501DB /* QuoteTableViewCell.swift */,
 				AAD44CD71E15D620006501DB /* Main.storyboard */,
+				AA98B08E1E1BA1470034373A /* BaseCell.swift */,
+				AA98B08C1E1BA10F0034373A /* QOTDCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -109,8 +124,7 @@
 		AAD44CEB1E15E256006501DB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				AA9E3F741E163CB600B743B0 /* QOTDViewController.swift */,
-				AAD44CE91E15E1BD006501DB /* QuotesTableViewController.swift */,
+				AA98B0851E1B9CBF0034373A /* QOTDController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -256,12 +270,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAD44CED1E15E5D4006501DB /* QuoteTableViewCell.swift in Sources */,
+				AA98B0861E1B9CBF0034373A /* QOTDController.swift in Sources */,
+				AA98B08B1E1B9F2E0034373A /* Extensions.swift in Sources */,
 				AAD44CE61E15D72A006501DB /* Quote.swift in Sources */,
 				AA98B0841E1B25A20034373A /* ApiService.swift in Sources */,
-				AAD44CEA1E15E1BD006501DB /* QuotesTableViewController.swift in Sources */,
 				AAD44CD41E15D620006501DB /* AppDelegate.swift in Sources */,
-				AA9E3F751E163CB600B743B0 /* QOTDViewController.swift in Sources */,
+				AA98B08F1E1BA1470034373A /* BaseCell.swift in Sources */,
+				AA98B0891E1B9EB60034373A /* Constants.swift in Sources */,
+				AA98B08D1E1BA10F0034373A /* QOTDCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
