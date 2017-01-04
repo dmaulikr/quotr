@@ -11,6 +11,27 @@ import SnapKit
 
 class QOTDCell: BaseCell {
     
+    let bgView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.backgroundColor = .white
+        imageView.layer.cornerRadius = 2
+        return imageView
+    }()
+    
+    let profileImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.backgroundColor = FlatUIColors.clouds
+        
+        imageView.image = UIImage(named: "steve_jobs")
+        imageView.contentMode = .scaleAspectFill
+        imageView.layer.masksToBounds = true
+        imageView.layer.cornerRadius = 75
+        
+        return imageView
+    }()
+    
     let contentLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -42,13 +63,27 @@ class QOTDCell: BaseCell {
 
     override func setupViews() {
         super.setupViews()
+
+        addSubview(bgView)
+        bgView.addSubview(profileImageView)
+        bgView.addSubview(contentLabel)
+        bgView.addSubview(authorLabel)
         
-        addSubview(contentLabel)
-        addSubview(authorLabel)
+        bgView.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.width.height.equalToSuperview().offset(-32)
+        }
+        
+        profileImageView.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.bottom.equalTo(contentLabel.snp.top).offset(-32)
+            make.height.width.lessThanOrEqualTo(150)
+        }
         
         contentLabel.snp.makeConstraints { (make) in
-            make.centerX.centerY.equalToSuperview()
-            make.width.equalToSuperview().offset(-32)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.width.equalToSuperview().offset(-64)
         }
         
         authorLabel.snp.makeConstraints { (make) in

@@ -20,7 +20,7 @@ class QOTDController: UICollectionViewController, UICollectionViewDelegateFlowLa
         fetchQuotes()
         
         navigationController?.navigationBar.isTranslucent = false
-        navigationController?.hidesBarsOnSwipe = true
+//        navigationController?.hidesBarsOnSwipe = true
         
         let titleLabel = UILabel(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height))
         
@@ -30,8 +30,14 @@ class QOTDController: UICollectionViewController, UICollectionViewDelegateFlowLa
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         navigationItem.titleView = titleLabel
         
-        collectionView?.backgroundColor = .white
+        collectionView?.backgroundColor = FlatUIColors.clouds
         collectionView?.register(QOTDCell.self, forCellWithReuseIdentifier: cellID)
+        
+        if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.scrollDirection = .horizontal
+        }
+        
+        collectionView?.isPagingEnabled = true
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -43,10 +49,14 @@ class QOTDController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         cell.quote = quotes?[indexPath.item]
         
+        cell.bgView.alpha = 0
+        cell.profileImageView.alpha = 0
         cell.contentLabel.alpha = 0
         cell.authorLabel.alpha = 0
         
         UIView.animate(withDuration: 1.0) {
+            cell.bgView.alpha = 1
+            cell.profileImageView.alpha = 1
             cell.contentLabel.alpha = 1
             cell.authorLabel.alpha = 1
         }
@@ -55,7 +65,7 @@ class QOTDController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width - 64, height: view.frame.height)
+        return CGSize(width: view.frame.width, height: view.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
