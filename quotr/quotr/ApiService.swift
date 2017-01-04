@@ -16,14 +16,27 @@ class ApiService: NSObject {
     
     func fetchQuotes(completion: @escaping ([Quote]) -> Void) {
         let urlString = "https://protected-cove-92007.herokuapp.com/all"
-        let url = URL(string: urlString)
         
-        URLSession.shared.dataTask(with: url!) { (data, response, error) in
+        guard let url = URL(string: urlString) else {
+            print("Unable to create a URL from urlString")
+            return
+        }
+        
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
             if error != nil {
-                print(error ?? "Error downloading JSON")
+                print(error?.localizedDescription ?? "Error downloading JSON")
+                DispatchQueue.main.async {
+                    completion([Quote(content: error?.localizedDescription ?? "Error downloading JSON", author: "HENRY M LY", id: 000)])
+                }
             }
+            
+            guard let data = data else {
+                print("No data")
+                return
+            }
+            
             do {
-                let json = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
+                let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
                 var quotes: [Quote] = []
     
                 for eachQuote in json as! [JSON] {

@@ -35,7 +35,7 @@ class QOTDCell: BaseCell {
     let contentLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Being the richest man in the cemetery doesn't matter to me. Going to bed at night saying we've done something wonderful, that's what matters to me."
+        label.text = "We are unable to load new quotes for you at this time."
         label.textColor = .black
         label.font = UIFont(name: "BodoniSvtyTwoITCTT-Book", size: 20.0)
         label.numberOfLines = 0
@@ -46,7 +46,7 @@ class QOTDCell: BaseCell {
     let authorLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "STEVE JOBS"
+        label.text = "HENRY M LY"
         label.textColor = FlatUIColors.salmon
         label.font = UIFont.boldSystemFont(ofSize: 10)
         label.numberOfLines = 0
@@ -92,4 +92,18 @@ class QOTDCell: BaseCell {
         }
     }
     
+    func shouldHideAllViews(_ toggle: Bool) {
+        if toggle {
+            bgView.alpha = 0
+            profileImageView.alpha = 0
+            contentLabel.alpha = 0
+            authorLabel.alpha = 0
+        } else {
+            bgView.alpha = 1
+            profileImageView.alpha = 1
+            contentLabel.alpha = 1
+            authorLabel.alpha = 1
+        }
+    }
+
 }

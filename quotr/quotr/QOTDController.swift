@@ -49,16 +49,10 @@ class QOTDController: UICollectionViewController, UICollectionViewDelegateFlowLa
         
         cell.quote = quotes?[indexPath.item]
         
-        cell.bgView.alpha = 0
-        cell.profileImageView.alpha = 0
-        cell.contentLabel.alpha = 0
-        cell.authorLabel.alpha = 0
+        cell.shouldHideAllViews(true)
         
         UIView.animate(withDuration: 1.0) {
-            cell.bgView.alpha = 1
-            cell.profileImageView.alpha = 1
-            cell.contentLabel.alpha = 1
-            cell.authorLabel.alpha = 1
+            cell.shouldHideAllViews(false)
         }
         
         return cell
