@@ -10,7 +10,7 @@ import UIKit
 
 typealias JSON = [String: Any]
 
-class ApiService: NSObject {
+class ApiService {
 
     static let sharedInstance = ApiService()
     
