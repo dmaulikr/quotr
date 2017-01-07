@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Moya
 
 class QOTDController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
     
@@ -14,6 +15,11 @@ class QOTDController: UICollectionViewController, UICollectionViewDelegateFlowLa
     
     let cellID = "cellID"
     
+    
+    // MARK: - Moya Tests
+    
+    let provider = MoyaProvider<MyService>()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -67,11 +73,36 @@ class QOTDController: UICollectionViewController, UICollectionViewDelegateFlowLa
     }
     
     func fetchQuotes() {
-        ApiService.sharedInstance.fetchQuotes { (quotes) in
-            self.quotes = quotes
-            self.quotes?.reverse()
-            self.collectionView?.reloadData()
+        provider.request(.all) { (result) in
+            switch result {
+            case let .success(moyaResponse):
+                let statusCode = moyaResponse.statusCode
+                print("⚡️⚡️⚡️⚡️⚡️")
+                print(statusCode)
+                print("⚡️⚡️⚡️⚡️⚡️")
+    
+                do {
+                    let data = moyaResponse.data
+                    let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+                    var quotes: [Quote] = []
+                    
+                    for eachQuote in json as! [JSON] {
+                        let newQuote = Quote(json: eachQuote)
+                        quotes.append(newQuote)
+                    }
+                    
+                    self.quotes = quotes.reversed()
+                    self.collectionView?.reloadData()
+                }
+                catch {
+                    print("Moya error")
+                }
+                
+            case let .failure(error):
+                print(error.errorDescription ?? "Moya error: Unable to download JSON")
+            }
         }
+    
     }
     
 }
